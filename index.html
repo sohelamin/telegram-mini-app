@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Mini App</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <h1>Hello, Telegram Mini App!</h1>
+
+    <script>
+        // Initialize the Telegram Web App
+        Telegram.WebApp.ready();
+
+        // You can interact with Telegram's API like getting user information
+        const user = Telegram.WebApp.initDataUnsafe.user;
+        if (user) {
+            document.body.innerHTML += `<p>Hello, ${user.first_name}!</p>`;
+        }
+    </script>
+</body>
+</html>
